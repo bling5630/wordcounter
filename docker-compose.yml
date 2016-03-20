@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    image: node:5
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/srv
+    working_dir: /srv
+    command: ["/srv/docker_init.sh"]
+
