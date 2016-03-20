@@ -1,5 +1,3 @@
-'use strict';
-
 var express = require('express'),
     bodyParser = require('body-parser'),
     wordCounter = require('./wordcounter'),
@@ -15,10 +13,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res, next) {
+  'use strict';
   res.send('Hello Dear!');
 });
 
 app.get('/result/', function(req, res, next) {
+  'use strict';
   wordCounter(req.query.url, function(error, words) {
     fs.writeFile(__dirname + '/../public/dataBubbleChart.json', JSON.stringify({children:words}, null, 2), function(error) {
       if (error) {
@@ -42,6 +42,7 @@ app.get('/result/', function(req, res, next) {
 });
 
 app.get('/dataBubbleChart', function(req, res) {
+  'use strict';
   fs.readFile(__dirname + '/../public/dataBubbleChart.json', 'utf8', function(error, data) {
     if (error)
       throw error;
@@ -50,6 +51,7 @@ app.get('/dataBubbleChart', function(req, res) {
 });
 
 app.get('/dataBarChart', function(req, res) {
+  'use strict';
   fs.readFile(__dirname + '/../public/dataBarChart.json', 'utf8', function(error, data) {
     if (error)
       throw error;
@@ -58,6 +60,7 @@ app.get('/dataBarChart', function(req, res) {
 });
 
 app.get('/dataTable', function(req, res) {
+  'use strict';
   fs.readFile(__dirname + '/../public/dataTable.json', 'utf8', function(error, data) {
     if (error)
       throw error;

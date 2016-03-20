@@ -1,0 +1,7 @@
+{
+  "name": "word counter",
+  "description": "Word densitiy calculator and dashboardapp using Express, D3, Parallax",
+  "repository": "https://github.com/bling5630/wordcounter",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "D3", "Parallax"]
+}

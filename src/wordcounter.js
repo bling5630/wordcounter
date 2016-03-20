@@ -1,11 +1,9 @@
-'use strict';
-
 var request = require("request"),
 	cheerio = require("cheerio"),
 	_ = require('lodash');
 
 function wordcounter(url, callback) {
-
+	'use strict';
 	request(url, function(error, response, body) {
 
 		var $page = cheerio.load(body),
@@ -26,7 +24,7 @@ function wordcounter(url, callback) {
 
 
 function transformDataToJSON(content) {
-
+	'use strict';
 	var output = [];
 
 	_.forIn(content, function(value, key) {
@@ -39,6 +37,7 @@ function transformDataToJSON(content) {
 }
 
 function calculateByFrequency(content) {
+	'use strict';
 	return _.reduce(content, function(countMap, word) {
 		countMap[word] = ++countMap[word] || 1;
 		return countMap;
@@ -46,12 +45,14 @@ function calculateByFrequency(content) {
 }
 
 function filterByLength(content) {
+	'use strict';
 	return _.filter(content.split(' '), function(n) {
 		return n.length > 2 && n.length < 8;
 	});
 }
 
 function clearTheParsedText(content) {
+	'use strict';
 	return content
 		.replace(/\s+/g, " ")
 		.replace(/[^a-zA-Z ]/g, "")

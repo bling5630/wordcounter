@@ -6,9 +6,9 @@
 
 #### 3. type your desired site such as http://imdb.com and push the submit button
 
-#### 4. finally you see the result:
+#### 4. finally you see the result like this:
 ![alt text][logo]
 
 [logo]:https://github.com/bling5630/Cookbook/blob/master/rest_api/submit_and_load/public/example.png
 
-#### [sample project for the future](http://hijiangtao.github.io/ss-vis-component/)
+#### [sample project](http://hijiangtao.github.io/ss-vis-component/) for the future, because I would like to create a complex dashboard like app
