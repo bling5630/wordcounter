@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res, next) {
   'use strict';
-  res.send('Hello Dear!');
+  res.send('Hello Dear! This is your word counter app, make yourself at home :)');
 });
 
 app.get('/result/', function(req, res, next) {
