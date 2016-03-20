@@ -11,4 +11,4 @@
 
 [logo]:https://github.com/bling5630/Cookbook/blob/master/rest_api/submit_and_load/public/example.png
 
-#### [sample](http://hijiangtao.github.io/ss-vis-component/)
+#### [sample project for the future](http://hijiangtao.github.io/ss-vis-component/)
